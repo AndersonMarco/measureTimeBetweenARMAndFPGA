@@ -1,0 +1,37 @@
+Quartus Prime Archive log --	/home/kite/Dropbox/private/programacao/quartus/measureTimeBetweenARMAndFPGA/measureTimeBetweenARMAndFPGA/__DE1_SOC_golden_top.auto.qarlog
+
+Archive:	/home/kite/Dropbox/private/programacao/quartus/measureTimeBetweenARMAndFPGA/measureTimeBetweenARMAndFPGA/__DE1_SOC_golden_top.auto.qar
+Date:		Tue May 16 23:21:42 2017
+Quartus Prime		16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/kite/Dropbox/private/programacao/quartus/measureTimeBetweenARMAndFPGA/measureTimeBetweenARMAndFPGA/db/DE1_SOC_golden_top.cbx.xml
+/home/kite/Dropbox/private/programacao/quartus/measureTimeBetweenARMAndFPGA/measureTimeBetweenARMAndFPGA/db/a_dpfifo_5771.tdf
+/home/kite/Dropbox/private/programacao/quartus/measureTimeBetweenARMAndFPGA/measureTimeBetweenARMAndFPGA/db/a_fefifo_7cf.tdf
+/home/kite/Dropbox/private/programacao/quartus/measureTimeBetweenARMAndFPGA/measureTimeBetweenARMAndFPGA/db/altsyncram_7pu1.tdf
+/home/kite/Dropbox/private/programacao/quartus/measureTimeBetweenARMAndFPGA/measureTimeBetweenARMAndFPGA/db/altsyncram_g0n1.tdf
+/home/kite/Dropbox/private/programacao/quartus/measureTimeBetweenARMAndFPGA/measureTimeBetweenARMAndFPGA/db/cntr_jgb.tdf
+/home/kite/Dropbox/private/programacao/quartus/measureTimeBetweenARMAndFPGA/measureTimeBetweenARMAndFPGA/db/cntr_vg7.tdf
+/home/kite/Dropbox/private/programacao/quartus/measureTimeBetweenARMAndFPGA/measureTimeBetweenARMAndFPGA/db/ddio_out_uqe.tdf
+/home/kite/Dropbox/private/programacao/quartus/measureTimeBetweenARMAndFPGA/measureTimeBetweenARMAndFPGA/db/measureTime.qpf
+/home/kite/Dropbox/private/programacao/quartus/measureTimeBetweenARMAndFPGA/measureTimeBetweenARMAndFPGA/db/scfifo_3291.tdf
+/home/kite/Dropbox/private/programacao/quartus/measureTimeBetweenARMAndFPGA/measureTimeBetweenARMAndFPGA/hc_output/HPS_LED_HEX.names_drv_tbl
+DE1_SOC_golden_top.flow.rpt
+DE1_SOC_golden_top.map.rpt
+DE1_SOC_golden_top.map.summary
+DE1_SOC_golden_top.qsf
+PLLJ_PLLSPE_INFO.txt
+assignment_defaults.qdf
+c5_pin_model_dump.txt
+hps_0.h
+hps_sdram_p0_all_pins.txt
+measureTime.sdc
+measureTime.v
+measureTime_assignment_defaults.qdf
+measureTime_description.txt
+soc_system.bsf
+soc_system.qsys
+	======= Total: 26 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

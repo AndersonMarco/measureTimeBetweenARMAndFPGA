@@ -1,0 +1,42 @@
+digraph  G{
+
+    subgraph cluster0 {
+        rankdir = TB;
+
+        node [];
+        color=blue;
+        label = "ARM";
+        a0[label="inicia programa"]
+        a1[label="confirmado envio de msg"]
+        a2[label="imprimir valor do contador"]
+        
+     
+    };
+    
+    subgraph cluster1 {
+        rank = same ;
+        
+        node [group=a];
+        b0[label="inicia o contador"];
+        b3[style=invis]
+        b1[label="para o contador"];
+       
+        label = "FPGA";
+        color=blue;              
+    };
+        
+
+  
+    
+    b0 -> a1 [label ="msg=0x00020000"]; 
+    b1 -> a2 [label ="(msg>>16)=3 \n e \n (msg&&0xffff)=contador"];
+    a0 -> b0 [label ="msg=0x00000001"]; 
+    a2 -> a0;
+    a1 -> b1 [label ="msg=0x00000002"]; 
+    b1 -> b0;
+
+   
+    a0->a1->a2 [style=invis];
+    b0->b3->b1 [style=invis];    
+
+}
