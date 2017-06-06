@@ -73,9 +73,39 @@ module soc_system (
 	memory_mem_odt,
 	memory_mem_dm,
 	memory_oct_rzqin,
+	pio_input2_external_connection_export,
 	pio_input_external_connection_export,
-	pio_output_external_connection_export,
-	reset_reset_n);	
+	reset_reset_n,
+	pio_input3_external_connection_export,
+	pio_input4_external_connection_export,
+	pio_input5_external_connection_export,
+	pio_input6_external_connection_export,
+	pio_input7_external_connection_export,
+	pio_input8_external_connection_export,
+	pio_input9_external_connection_export,
+	pio_input10_external_connection_export,
+	pio_input11_external_connection_export,
+	pio_input12_external_connection_export,
+	pio_input13_external_connection_export,
+	pio_input14_external_connection_export,
+	pio_input15_external_connection_export,
+	pio_input16_external_connection_export,
+	pio_output16_external_connection_export,
+	pio_output15_external_connection_export,
+	pio_output14_external_connection_export,
+	pio_output13_external_connection_export,
+	pio_output12_external_connection_export,
+	pio_output11_external_connection_export,
+	pio_output10_external_connection_export,
+	pio_output9_external_connection_export,
+	pio_output8_external_connection_export,
+	pio_output7_external_connection_export,
+	pio_output6_external_connection_export,
+	pio_output5_external_connection_export,
+	pio_output4_external_connection_export,
+	pio_output3_external_connection_export,
+	pio_output2_external_connection_export,
+	pio_output_external_connection_export);	
 
 	input		clk_clk;
 	output		hps_0_h2f_reset_reset_n;
@@ -150,7 +180,37 @@ module soc_system (
 	output		memory_mem_odt;
 	output	[3:0]	memory_mem_dm;
 	input		memory_oct_rzqin;
+	input	[31:0]	pio_input2_external_connection_export;
 	input	[31:0]	pio_input_external_connection_export;
-	output	[31:0]	pio_output_external_connection_export;
 	input		reset_reset_n;
+	input	[31:0]	pio_input3_external_connection_export;
+	input	[31:0]	pio_input4_external_connection_export;
+	input	[31:0]	pio_input5_external_connection_export;
+	input	[31:0]	pio_input6_external_connection_export;
+	input	[31:0]	pio_input7_external_connection_export;
+	input	[31:0]	pio_input8_external_connection_export;
+	input	[31:0]	pio_input9_external_connection_export;
+	input	[31:0]	pio_input10_external_connection_export;
+	input	[31:0]	pio_input11_external_connection_export;
+	input	[31:0]	pio_input12_external_connection_export;
+	input	[31:0]	pio_input13_external_connection_export;
+	input	[31:0]	pio_input14_external_connection_export;
+	input	[31:0]	pio_input15_external_connection_export;
+	input	[31:0]	pio_input16_external_connection_export;
+	output	[31:0]	pio_output16_external_connection_export;
+	output	[31:0]	pio_output15_external_connection_export;
+	output	[31:0]	pio_output14_external_connection_export;
+	output	[31:0]	pio_output13_external_connection_export;
+	output	[31:0]	pio_output12_external_connection_export;
+	output	[31:0]	pio_output11_external_connection_export;
+	output	[31:0]	pio_output10_external_connection_export;
+	output	[31:0]	pio_output9_external_connection_export;
+	output	[31:0]	pio_output8_external_connection_export;
+	output	[31:0]	pio_output7_external_connection_export;
+	output	[31:0]	pio_output6_external_connection_export;
+	output	[31:0]	pio_output5_external_connection_export;
+	output	[31:0]	pio_output4_external_connection_export;
+	output	[31:0]	pio_output3_external_connection_export;
+	output	[31:0]	pio_output2_external_connection_export;
+	output	[31:0]	pio_output_external_connection_export;
 endmodule

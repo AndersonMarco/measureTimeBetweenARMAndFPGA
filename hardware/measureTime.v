@@ -165,8 +165,10 @@ module measureTime(
       output             VGA_VS
 );
 
-wire [31:0] inputPio;
-reg [31:0] outputPio=32'h00000000;
+wire [31:0] inputPio[15:0];
+wire [31:0] outputPio[15:0];
+wire [31:0] outputPioWire[15:0];
+
 //=======================================================
 //  Structural coding
 //=======================================================
@@ -255,42 +257,60 @@ soc_system u0 (
         .hps_0_hps_io_hps_io_gpio_inst_GPIO53  ( HPS_LED),  //                               .hps_io_gpio_inst_GPIO53
         .hps_0_hps_io_hps_io_gpio_inst_GPIO54  ( HPS_KEY),  //                               .hps_io_gpio_inst_GPIO54
         .hps_0_hps_io_hps_io_gpio_inst_GPIO61  ( HPS_GSENSOR_INT),  //                               .hps_io_gpio_inst_GPIO61
-        
-		  .pio_input_external_connection_export    (outputPio),    // led_pio_external_connection.export
         .hps_0_h2f_reset_reset_n               (1'b1),               //             hps_0_h2f_reset.reset_n
                  //         seg7_if_conduit_end.export       												 
-        .pio_output_external_connection_export   (inputPio)    // switch_0_external_connection.export                        .reset_req														 
-        
+        .pio_output_external_connection_export   (inputPio[4'h0]),    // switch_0_external_connection.export                        .reset_req														 
+        .pio_output2_external_connection_export  (inputPio[4'h1]),  //  pio_output2_external_connection.export
+        .pio_output3_external_connection_export  (inputPio[4'h2]),   //  pio_output3_external_connection.export        
+        .pio_output4_external_connection_export  (inputPio[4'h3]),  //  pio_output4_external_connection.export
+        .pio_output5_external_connection_export  (inputPio[4'h4]),  //  pio_output5_external_connection.export
+        .pio_output6_external_connection_export  (inputPio[4'h5]),  //  pio_output6_external_connection.export
+        .pio_output7_external_connection_export  (inputPio[4'h6]),  //  pio_output7_external_connection.export
+        .pio_output8_external_connection_export  (inputPio[4'h7]),  //  pio_output8_external_connection.export
+        .pio_output9_external_connection_export  (inputPio[4'h8]),  //  pio_output9_external_connection.export
+        .pio_output10_external_connection_export (inputPio[4'h9]), // pio_output10_external_connection.export
+        .pio_output11_external_connection_export (inputPio[4'ha]), // pio_output11_external_connection.export
+        .pio_output12_external_connection_export (inputPio[4'hb]), // pio_output12_external_connection.export
+        .pio_output13_external_connection_export (inputPio[4'hc]), // pio_output13_external_connection.export
+        .pio_output14_external_connection_export (inputPio[4'hd]), // pio_output14_external_connection.export
+        .pio_output15_external_connection_export (inputPio[4'he]), // pio_output15_external_connection.export        
+        .pio_output16_external_connection_export (inputPio[4'hf]),  // pio_output16_external_connection.export
+        .pio_input_external_connection_export    (outputPio[4'h0]),    // led_pio_external_connection.export
+        .pio_input2_external_connection_export   (outputPio[4'h1]),   //   pio_input2_external_connection.export
+        .pio_input3_external_connection_export   (outputPio[4'h2]),   //   pio_input3_external_connection.export
+        .pio_input4_external_connection_export   (outputPio[4'h3]),   //   pio_input4_external_connection.export
+        .pio_input5_external_connection_export   (outputPio[4'h4]),   //   pio_input5_external_connection.export
+        .pio_input6_external_connection_export   (outputPio[4'h5]),   //   pio_input6_external_connection.export
+        .pio_input7_external_connection_export   (outputPio[4'h6]),   //   pio_input7_external_connection.export
+        .pio_input8_external_connection_export   (outputPio[4'h7]),   //   pio_input8_external_connection.export
+        .pio_input9_external_connection_export   (outputPio[4'h8]),   //   pio_input9_external_connection.export
+        .pio_input10_external_connection_export  (outputPio[4'h9]),  //  pio_input10_external_connection.export
+        .pio_input11_external_connection_export  (outputPio[4'ha]),  //  pio_input11_external_connection.export
+        .pio_input12_external_connection_export  (outputPio[4'hb]),  //  pio_input12_external_connection.export
+        .pio_input13_external_connection_export  (outputPio[4'hc]),  //  pio_input13_external_connection.export
+        .pio_input14_external_connection_export  (outputPio[4'hd]),  //  pio_input14_external_connection.export
+        .pio_input15_external_connection_export  (outputPio[4'he]),  //  pio_input15_external_connection.export
+        .pio_input16_external_connection_export  (outputPio[4'hf])   //  pio_input16_external_connection.export
     );
-
+  
+   
+    reciveAndSendMessage reciveAndSendMessage_dut1  (CLOCK_50,inputPio[4'h0], outputPio[4'h0],LEDR[4'h0]);
+    reciveAndSendMessage reciveAndSendMessage_dut2  (CLOCK_50,inputPio[4'h1], outputPio[4'h1],LEDR[4'h1]);
+    reciveAndSendMessage reciveAndSendMessage_dut3  (CLOCK_50,inputPio[4'h2], outputPio[4'h2],LEDR[4'h2]);
+    reciveAndSendMessage reciveAndSendMessage_dut4  (CLOCK_50,inputPio[4'h3], outputPio[4'h3],LEDR[4'h3]);
+    reciveAndSendMessage reciveAndSendMessage_dut5  (CLOCK_50,inputPio[4'h4], outputPio[4'h4],LEDR[4'h4]);
+    reciveAndSendMessage reciveAndSendMessage_dut6  (CLOCK_50,inputPio[4'h5], outputPio[4'h5],LEDR[4'h5]);
+    reciveAndSendMessage reciveAndSendMessage_dut7  (CLOCK_50,inputPio[4'h6], outputPio[4'h6],LEDR[4'h6]);       
+    reciveAndSendMessage reciveAndSendMessage_dut8  (CLOCK_50,inputPio[4'h7], outputPio[4'h7],LEDR[4'h7]);
+    reciveAndSendMessage reciveAndSendMessage_dut9  (CLOCK_50,inputPio[4'h8], outputPio[4'h8],LEDR[4'h8]);
+    reciveAndSendMessage reciveAndSendMessage_duta  (CLOCK_50,inputPio[4'h9], outputPio[4'h9],LEDR[4'h9]);
+    /*reciveAndSendMessage reciveAndSendMessage_dutb  (CLOCK_50,inputPio[4'ha], outputPio[4'ha]);
+    reciveAndSendMessage reciveAndSendMessage_dutc  (CLOCK_50,inputPio[4'hb], outputPio[4'hb]);
+    reciveAndSendMessage reciveAndSendMessage_dutd  (CLOCK_50,inputPio[4'hc], outputPio[4'hc]);
+    reciveAndSendMessage reciveAndSendMessage_dute  (CLOCK_50,inputPio[4'hd], outputPio[4'hd]);
+    reciveAndSendMessage reciveAndSendMessage_dutf  (CLOCK_50,inputPio[4'he], outputPio[4'he]);
+    reciveAndSendMessage reciveAndSendMessage_dut10 (CLOCK_50,inputPio[4'hf], outputPio[4'hf]);  */
     
 
-reg [31:0] stage=32'h00000000;
-reg resetStage=1'b1;
-reg [31:0] counter;
-   
-always @(posedge CLOCK_50) begin   
-   if(stage!=32'h00000000) begin
-      counter=counter+32'h00000001;      
-   end
-   if(inputPio==32'h00000001 &&  stage==32'h00000000) begin
-      resetStage=1'b0;
-      outputPio=32'h00020000;
-      counter=32'h00000000;      
-   end
-   else if(inputPio==32'h00000002 && stage !=32'h00000000) begin
-      outputPio=32'h00030000|counter;
-      resetStage=1'b1;
-   end
-   
-end 
-always @(negedge CLOCK_50) begin
-   if(resetStage==1'b0) begin
-      stage=stage+32'h00000001;
-   end
-   else begin
-      stage=32'h00000000;
-   end
-   
-end
+
 endmodule
